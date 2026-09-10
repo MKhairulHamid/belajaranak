@@ -182,4 +182,3 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden&&session){s
 window.addEventListener('storage',event=>{if(event.key!==C.KEY)return;if(session){stopTimer();storageIssue='Data diperbarui pada tab lain. Muat ulang halaman sebelum melanjutkan agar catatan tetap selaras.';toast(storageIssue);return;}try{state=event.newValue?C.validateState(JSON.parse(event.newValue),lessons,topics):C.initialState();storageIssue='';if(dialog.open)closeModal();render();}catch{toast('Perubahan dari tab lain belum dapat dibaca.');}});
 render();
 })();
-
