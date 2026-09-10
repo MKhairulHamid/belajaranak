@@ -1,0 +1,1 @@
+{"name":"belajar-anak","version":"1.0.0","private":true,"description":"Pendamping belajar di rumah untuk TK B","scripts":{"start":"node scripts/serve.mjs","test":"node --test tests/*.test.mjs"}}
