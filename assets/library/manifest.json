@@ -1,0 +1,517 @@
+{
+  "version": 1,
+  "style": "Bentuk organik, garis hijau gelap, warna lembut; latar transparan.",
+  "assets": [
+    {
+      "id": "apel",
+      "label": "Apel",
+      "alt": "Apel",
+      "tags": [
+        "buah",
+        "apple",
+        "hitung",
+        "bunyi-a"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/apel.svg",
+      "outline": "outline/apel.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "jeruk",
+      "label": "Jeruk",
+      "alt": "Jeruk",
+      "tags": [
+        "buah",
+        "orange",
+        "hitung"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/jeruk.svg",
+      "outline": "outline/jeruk.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "pisang",
+      "label": "Pisang",
+      "alt": "Pisang",
+      "tags": [
+        "buah",
+        "banana",
+        "sarapan"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/pisang.svg",
+      "outline": "outline/pisang.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "daun",
+      "label": "Daun",
+      "alt": "Daun",
+      "tags": [
+        "alam",
+        "leaf",
+        "pola"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/daun.svg",
+      "outline": "outline/daun.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "bunga",
+      "label": "Bunga",
+      "alt": "Bunga",
+      "tags": [
+        "alam",
+        "flower",
+        "seni"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/bunga.svg",
+      "outline": "outline/bunga.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "buku",
+      "label": "Buku",
+      "alt": "Buku",
+      "tags": [
+        "sekolah",
+        "book",
+        "bunyi-b"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/buku.svg",
+      "outline": "outline/buku.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "pensil",
+      "label": "Pensil",
+      "alt": "Pensil",
+      "tags": [
+        "sekolah",
+        "pencil",
+        "menulis"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/pensil.svg",
+      "outline": "outline/pensil.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "botol-minum",
+      "label": "Botol minum",
+      "alt": "Botol minum",
+      "tags": [
+        "sekolah",
+        "bottle",
+        "air"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/botol-minum.svg",
+      "outline": "outline/botol-minum.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "tas-sekolah",
+      "label": "Tas sekolah",
+      "alt": "Tas sekolah",
+      "tags": [
+        "sekolah",
+        "bag",
+        "rutinitas"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/tas-sekolah.svg",
+      "outline": "outline/tas-sekolah.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "gelas",
+      "label": "Gelas",
+      "alt": "Gelas",
+      "tags": [
+        "rumah",
+        "cup",
+        "air"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/gelas.svg",
+      "outline": "outline/gelas.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "piring",
+      "label": "Piring",
+      "alt": "Piring",
+      "tags": [
+        "rumah",
+        "plate",
+        "hitung"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/piring.svg",
+      "outline": "outline/piring.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "kaus-kaki",
+      "label": "Kaus kaki",
+      "alt": "Kaus kaki",
+      "tags": [
+        "pakaian",
+        "sock",
+        "pasangan"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/kaus-kaki.svg",
+      "outline": "outline/kaus-kaki.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "bola",
+      "label": "Bola",
+      "alt": "Bola",
+      "tags": [
+        "mainan",
+        "ball",
+        "bunyi-b"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/bola.svg",
+      "outline": "outline/bola.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "bintang",
+      "label": "Bintang",
+      "alt": "Bintang",
+      "tags": [
+        "bentuk",
+        "star",
+        "apresiasi"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/bintang.svg",
+      "outline": "outline/bintang.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "awan",
+      "label": "Awan",
+      "alt": "Awan",
+      "tags": [
+        "cuaca",
+        "cloud",
+        "emosi"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/awan.svg",
+      "outline": "outline/awan.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "matahari",
+      "label": "Matahari",
+      "alt": "Matahari",
+      "tags": [
+        "cuaca",
+        "sun",
+        "pagi"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/matahari.svg",
+      "outline": "outline/matahari.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "biji",
+      "label": "Biji kacang",
+      "alt": "Biji kacang",
+      "tags": [
+        "alam",
+        "seed",
+        "tanaman"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/biji.svg",
+      "outline": "outline/biji.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "kecambah",
+      "label": "Kecambah",
+      "alt": "Kecambah",
+      "tags": [
+        "alam",
+        "sprout",
+        "tanaman"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/kecambah.svg",
+      "outline": "outline/kecambah.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "pohon",
+      "label": "Pohon",
+      "alt": "Pohon",
+      "tags": [
+        "alam",
+        "tree",
+        "lingkungan"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/pohon.svg",
+      "outline": "outline/pohon.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "kucing",
+      "label": "Kucing",
+      "alt": "Kucing",
+      "tags": [
+        "hewan",
+        "cat",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/kucing.svg",
+      "outline": "outline/kucing.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "anjing",
+      "label": "Anjing",
+      "alt": "Anjing",
+      "tags": [
+        "hewan",
+        "dog",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/anjing.svg",
+      "outline": "outline/anjing.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "burung",
+      "label": "Burung",
+      "alt": "Burung",
+      "tags": [
+        "hewan",
+        "bird",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/burung.svg",
+      "outline": "outline/burung.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "ikan",
+      "label": "Ikan",
+      "alt": "Ikan",
+      "tags": [
+        "hewan",
+        "fish",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/ikan.svg",
+      "outline": "outline/ikan.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "kelinci",
+      "label": "Kelinci",
+      "alt": "Kelinci",
+      "tags": [
+        "hewan",
+        "rabbit",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/kelinci.svg",
+      "outline": "outline/kelinci.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "siput",
+      "label": "Siput",
+      "alt": "Siput",
+      "tags": [
+        "hewan",
+        "snail",
+        "animal"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/siput.svg",
+      "outline": "outline/siput.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "rumah",
+      "label": "Rumah",
+      "alt": "Rumah",
+      "tags": [
+        "rumah",
+        "house",
+        "rutinitas"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/rumah.svg",
+      "outline": "outline/rumah.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "sikat-gigi",
+      "label": "Sikat gigi",
+      "alt": "Sikat gigi",
+      "tags": [
+        "kebersihan",
+        "toothbrush",
+        "pagi"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/sikat-gigi.svg",
+      "outline": "outline/sikat-gigi.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "sabun",
+      "label": "Sabun",
+      "alt": "Sabun",
+      "tags": [
+        "kebersihan",
+        "soap",
+        "tangan"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/sabun.svg",
+      "outline": "outline/sabun.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "kaus",
+      "label": "Kaus",
+      "alt": "Kaus",
+      "tags": [
+        "pakaian",
+        "shirt",
+        "rutinitas"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/kaus.svg",
+      "outline": "outline/kaus.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "hati",
+      "label": "Hati",
+      "alt": "Hati",
+      "tags": [
+        "emosi",
+        "heart",
+        "apresiasi"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/hati.svg",
+      "outline": "outline/hati.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "lingkaran",
+      "label": "Lingkaran",
+      "alt": "Lingkaran",
+      "tags": [
+        "bentuk",
+        "circle",
+        "pola"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/lingkaran.svg",
+      "outline": "outline/lingkaran.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "persegi",
+      "label": "Persegi",
+      "alt": "Persegi",
+      "tags": [
+        "bentuk",
+        "square",
+        "pola"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/persegi.svg",
+      "outline": "outline/persegi.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "segitiga",
+      "label": "Segitiga",
+      "alt": "Segitiga",
+      "tags": [
+        "bentuk",
+        "triangle",
+        "pola"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/segitiga.svg",
+      "outline": "outline/segitiga.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    },
+    {
+      "id": "balok",
+      "label": "Balok",
+      "alt": "Balok",
+      "tags": [
+        "mainan",
+        "block",
+        "pola"
+      ],
+      "width": 128,
+      "height": 128,
+      "color": "color/balok.svg",
+      "outline": "outline/balok.svg",
+      "usage": "Benda tunggal; aman diulang untuk soal hitung, cocokkan, kosakata, pola, dan rutinitas."
+    }
+  ]
+}
