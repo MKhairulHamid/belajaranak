@@ -4,9 +4,9 @@ Diperiksa pada 11 September 2026.
 
 ## Otomatis
 
-- `node --check app.js`, `node --check core.js`, dan `node --check data.js` lulus.
-- `node --test tests/*.test.mjs`: 16 tes lulus.
-- Cakupan: kelengkapan 32 materi, delapan bidang, akun awal berbayar, pemisahan data anak, perhitungan progres dan pengulangan, kalender, penyesuaian rekomendasi, validasi cadangan, pemulihan draf, escaping teks, serta path aset relatif.
+- `node --check` untuk `app.js`, `core.js`, `data.js`, `sd1-data.js`, dan `worksheets.js` lulus.
+- `node --test tests/*.test.mjs`: 19 tes lulus.
+- Cakupan: kelengkapan 48 materi (32 TK B + 16 kelas 1 SD), delapan bidang, filter rekomendasi per jenjang, validasi jawaban worksheet dan nilai bawaan untuk data lama, akun awal berbayar, pemisahan data anak, perhitungan progres dan pengulangan, kalender, penyesuaian rekomendasi, validasi cadangan, pemulihan draf, escaping teks, serta path aset relatif.
 
 ## Browser
 
@@ -22,6 +22,9 @@ Diperiksa pada browser berbasis Chromium, termasuk viewport ponsel 390 × 844 da
 - Menolak cadangan dengan versi tidak valid tanpa mengganti data yang ada.
 - Memulihkan cadangan valid dan memeriksa progres yang kembali.
 - Memeriksa tampilan beranda serta panduan sesi di layar ponsel.
+- Membuka seluruh 48 halaman materi dan worksheet tanpa galat konsol; semua aset `assets/library` (warna dan garis) yang dirujuk worksheet tersedia.
+- Menjalankan sesi kelas 1 SD: menandai bahan siap, berpindah ke worksheet anak, mengisi jawaban, memuat ulang (jawaban dan tampilan tetap), lalu menyelesaikan sesi.
+- Menyiapkan cetak worksheet anak, panduan orang tua, dan paket sesi tanpa galat.
 
 Dialog cetak sistem, keluaran printer, dan kualitas suara text-to-speech belum diverifikasi. Pengujian lintas browser Safari/Firefox dan perangkat fisik belum dilakukan.
 
