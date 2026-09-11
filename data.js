@@ -340,6 +340,8 @@ const guides=[
  {id:'mistakes',title:'Saat jawabannya belum tepat',subtitle:'Panduan pendamping · 3 menit',icon:'heart',intro:'Jawaban anak memberi petunjuk tentang caranya berpikir. Mulai dari situ sebelum memberi penjelasan.',steps:['Tanyakan cara anak mendapatkan jawaban tanpa memberi nada menguji.','Kembali ke benda nyata. Pindahkan, pasangkan, atau urutkan sambil mengamati bersama.','Jika anak mulai lelah, sederhanakan tugas atau akhiri dengan hal yang nyaman. Catat bagian yang perlu diulang.'],example:'“Boleh tunjukkan caramu menghitung? Kita geser benda yang sudah dihitung ke sini.”'},
  {id:'routine',title:'Rutinitas yang muat di hari Anda',subtitle:'Panduan pendamping · 2 menit',icon:'calendar',intro:'Rutinitas membantu ketika bisa disesuaikan dengan hari keluarga. Sesi yang terlewat dapat dijadwalkan ulang.',steps:['Pilih waktu setelah kebiasaan yang sudah ada, misalnya setelah camilan sore.','Siapkan bahan dari satu aktivitas saja. Mulai dengan durasi pendek dan berhenti saat perlu.','Akhiri dengan satu pertanyaan tentang pengalaman hari ini. Pilih jadwal berikutnya yang realistis.'],example:'“Hari ini kita punya waktu sebentar. Mau mencoba satu pesanan di toko buah kita?”'}
 ];
+lessons.forEach(l=>l.level='tkb');
 global.BAData={topics,lessons,guides};
+if(typeof module!=='undefined')require('./sd1-data.js')(global.BAData);
 if (typeof module!=='undefined') module.exports=global.BAData;
 })(typeof window!=='undefined'?window:globalThis);
