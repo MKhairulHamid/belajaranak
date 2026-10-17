@@ -32,8 +32,9 @@ menyusun paket 30 hari yang bergilir antar delapan bidang, sehingga delapan hari
 pertama sudah menyentuh seluruh bidang. Urutan boleh dikerjakan tidak berurutan;
 nomor hari hanya penanda posisi dan dapat dimulai ulang kapan saja.
 
-Jenjang dengan materi kurang dari 30 (Kelas 1 SD, 16 materi) mendapat hari
-bertanda **ulang** yang memakai materi yang sudah muncul.
+Kedua jenjang kini memiliki 32 materi, jadi 30 hari paket berisi materi baru
+seluruhnya. Bila suatu jenjang memiliki kurang dari 30 materi, sisa hari diberi
+tanda **ulang** dan memakai materi yang sudah muncul.
 
 ## Alur satu materi
 
@@ -45,14 +46,12 @@ bertanda **ulang** yang memakai materi yang sudah muncul.
 
 ## Materi
 
-48 materi dalam 8 bidang: Bahasa Indonesia, Matematika, Bahasa Inggris, Sains &
+64 materi dalam 8 bidang: Bahasa Indonesia, Matematika, Bahasa Inggris, Sains &
 Alam, Seni & Kreativitas, Motorik & Gerak, Sosial & Emosi, Kemandirian.
-32 materi TK B dan 16 materi Kelas 1 SD. Tiap materi berisi manfaat, harapan
-hasil, bahan, tiga perintah dengan kalimat yang bisa dibacakan, worksheet anak
-siap cetak, dua soal percakapan dengan kunci jawaban, dan pencatatan hasil.
-
-Jumlah materi kedua jenjang belum seimbang. Kelas 1 SD masih perlu tambahan
-materi agar paket 30 harinya tidak banyak mengulang.
+32 materi TK B dan 32 materi Kelas 1 SD, masing-masing 4 materi per bidang.
+Tiap materi berisi manfaat, harapan hasil, bahan, tiga perintah dengan kalimat
+yang bisa dibacakan, worksheet anak siap cetak, dua soal percakapan dengan
+kunci jawaban, dan pencatatan hasil.
 
 ## Penyimpanan
 
