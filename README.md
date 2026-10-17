@@ -1,27 +1,77 @@
 # Belajar Anak
 
-Aplikasi pendamping belajar di rumah untuk orang tua anak usia 6 tahun (TK B menuju SD). HTML, CSS, dan JavaScript tanpa dependensi runtime atau proses build.
+Ruang kerja orang tua untuk menemani anak belajar di rumah. Intinya satu hal:
+**mempermudah orang tua menjalankan peran guru di rumah lewat worksheet dan
+perintah yang komunikatif.** Catatan perkembangan tetap ada, tetapi hanya
+sebagai ringkasan dari sesi yang sudah dijalankan — bukan fitur utama.
+
+HTML, CSS, dan JavaScript tanpa dependensi runtime atau proses build.
 
 ## Menjalankan
 
 Buka `index.html`, atau jalankan `node scripts/serve.mjs` lalu buka `http://localhost:4173`.
 
-## GitHub Pages
+Saat pertama dibuka, aplikasi meminta nama anak, tanggal lahir, dan **kode belajar**.
+Kode uji coba: `TKB-2026` (usia 5–6 tahun) atau `SD1-2026` (7 tahun ke atas).
 
-Di repo GitHub, buka **Settings → Pages → Deploy from a branch**, pilih branch **main**, folder **/ (root)**. Semua tautan dan aset menggunakan path relatif sehingga mendukung `/belajaranak/`.
+## Satu kode, satu jenjang
 
-## Penyimpanan
+Paket dijual per usia. Satu kode belajar membuka satu jenjang, dan jenjang itu
+tidak dapat diganti dari dalam aplikasi. Usia anak dipakai untuk memeriksa
+kecocokan: bila kode dan usia berbeda, aplikasi memberi tahu tetapi tetap
+mengikuti kode yang dibeli. Seluruh katalog, paket, dan ringkasan hasil hanya
+menampilkan materi jenjang tersebut.
 
-Profil, paket aktif, jadwal, aktivitas tersimpan, catatan, dan hasil sesi disimpan di localStorage browser. Data terpisah untuk setiap profil anak. Ekspor dan pemulihan cadangan tersedia di Pengaturan. Data tidak dikirim ke server. Menghapus data situs akan menghapus data di perangkat itu.
+Format kode: `TKB-0000` atau `SD1-0000`. Ini PoC — kode hanya divalidasi
+formatnya di perangkat, belum ada pemeriksaan ke server.
 
-Pengguna langsung masuk dengan paket Rumah Belajar aktif. Perubahan paket adalah pilihan lokal dan tidak menjalankan transaksi pembayaran.
+## Paket 30 hari
+
+Orang tua tidak menyusun rencana sendiri. Begitu kode dimasukkan, aplikasi
+menyusun paket 30 hari yang bergilir antar delapan bidang, sehingga delapan hari
+pertama sudah menyentuh seluruh bidang. Urutan boleh dikerjakan tidak berurutan;
+nomor hari hanya penanda posisi dan dapat dimulai ulang kapan saja.
+
+Jenjang dengan materi kurang dari 30 (Kelas 1 SD, 16 materi) mendapat hari
+bertanda **ulang** yang memakai materi yang sudah muncul.
+
+## Alur satu materi
+
+1. **Halaman pembuka** — judul, manfaat materi, harapan hasil anak, dan bahan
+   yang perlu disiapkan. Belum ada worksheet di sini.
+2. Tekan **Mulai** → satu halaman kerja berisi seluruhnya tanpa berpindah
+   halaman: bahan, perintah untuk orang tua, worksheet anak, soal percakapan,
+   catat hasil.
 
 ## Materi
 
-32 aktivitas lengkap dalam 8 bidang: Bahasa Indonesia, Matematika, Bahasa Inggris, Sains & Alam, Seni & Kreativitas, Motorik & Gerak, Sosial & Emosi, Kemandirian. Tiap aktivitas berisi tujuan, bahan, langkah, contoh percakapan, bantuan saat kesulitan, eksplorasi lanjutan, lembar cetak, dan pencatatan hasil. Hasil aktivitas dan penguasaan dibedakan; aplikasi tidak mengklaim anak siap sekolah hanya dari jumlah sesi.
+48 materi dalam 8 bidang: Bahasa Indonesia, Matematika, Bahasa Inggris, Sains &
+Alam, Seni & Kreativitas, Motorik & Gerak, Sosial & Emosi, Kemandirian.
+32 materi TK B dan 16 materi Kelas 1 SD. Tiap materi berisi manfaat, harapan
+hasil, bahan, tiga perintah dengan kalimat yang bisa dibacakan, worksheet anak
+siap cetak, dua soal percakapan dengan kunci jawaban, dan pencatatan hasil.
+
+Jumlah materi kedua jenjang belum seimbang. Kelas 1 SD masih perlu tambahan
+materi agar paket 30 harinya tidak banyak mengulang.
+
+## Penyimpanan
+
+Profil, paket, jawaban worksheet, dan hasil sesi disimpan di localStorage
+browser, terpisah per profil anak. Ekspor dan pemulihan cadangan tersedia di
+Pengaturan. Data tidak dikirim ke server. Menghapus data situs akan menghapus
+data di perangkat itu. Kunci penyimpanan `belajaranak:v2`; data dari versi
+sebelumnya tidak dimigrasikan.
+
+## GitHub Pages
+
+Di repo GitHub, buka **Settings → Pages → Deploy from a branch**, pilih branch
+**main**, folder **/ (root)**. Semua tautan dan aset memakai path relatif
+sehingga mendukung `/belajaranak/`.
 
 ## Pemeriksaan
 
 `node --test tests/*.test.mjs`
 
-Implementasi konsep produk dengan materi awal untuk evaluasi bersama keluarga. Materi belum melalui penelaahan ahli pendidikan dan bukan asesmen diagnostik atau sertifikasi kesiapan sekolah.
+Implementasi konsep produk dengan materi awal untuk evaluasi bersama keluarga.
+Materi belum melalui penelaahan ahli pendidikan dan bukan asesmen diagnostik
+atau sertifikasi kesiapan sekolah.

@@ -1,31 +1,32 @@
 # Catatan verifikasi
 
-Diperiksa pada 11 September 2026.
+Diperiksa pada 18 Oktober 2026, setelah perombakan alur ke fokus worksheet.
 
 ## Otomatis
 
-- `node --check` untuk `app.js`, `core.js`, `data.js`, `sd1-data.js`, dan `worksheets.js` lulus.
-- `node --test tests/*.test.mjs`: 19 tes lulus.
-- Cakupan: kelengkapan 48 materi (32 TK B + 16 kelas 1 SD), delapan bidang, filter rekomendasi per jenjang, validasi jawaban worksheet dan nilai bawaan untuk data lama, akun awal berbayar, pemisahan data anak, perhitungan progres dan pengulangan, kalender, penyesuaian rekomendasi, validasi cadangan, pemulihan draf, escaping teks, serta path aset relatif.
+- `node --check` untuk `app.js`, `core.js`, `data.js`, `sd1-data.js`, `content.js`, dan `worksheets.js` lulus.
+- `node --test tests/*.test.mjs`: 30 tes lulus.
+- Cakupan: kelengkapan 48 materi di delapan bidang, manfaat dan harapan hasil untuk tiap materi, validasi soal beserta sebaran posisi jawaban benar, penolakan soal yang mematok satu nama anak, penguraian kode belajar, pemetaan usia ke jenjang, penyusunan paket 30 hari (bergilir antar bidang, hari ulang, tidak mencampur jenjang), perhitungan nomor hari dan kemajuan paket, pemisahan data antar profil, aturan pengulangan dua hari, validasi cadangan termasuk kode dan jenjang yang tidak cocok, validasi draf dan jawaban worksheet, escaping teks, kelengkapan worksheet beserta kunci jawabannya, serta pemuatan seluruh modul dari path relatif.
+- Satu tes menjaga agar fitur yang dihapus (jurnal, portofolio, penjadwalan manual, mode anak, favorit) tidak kembali dirujuk aplikasi.
 
 ## Browser
 
-Diperiksa pada browser berbasis Chromium, termasuk viewport ponsel 390 × 844 dan tampilan desktop. Aplikasi disajikan pada subpath `/belajaranak/` untuk memeriksa struktur URL GitHub Pages.
+Diperiksa pada browser berbasis Chromium, viewport ponsel 375 × 812 dan desktop, disajikan pada subpath `/belajaranak/` untuk memeriksa struktur URL GitHub Pages. Tidak ada galat konsol.
 
-- Membuka materi, mengikuti langkah kegiatan, menjawab pertanyaan, dan menyelesaikan sesi dengan catatan orang tua.
-- Menyimpan sesi, memuat ulang, dan melanjutkan dengan jawaban, pengamatan, serta catatan yang tetap tersimpan.
-- Mengubah nama anak, menambah profil, berpindah profil, dan memeriksa pemisahan progres.
-- Mengubah paket aktif, durasi, gaya belajar, waktu, dan pilihan materi dalam jadwal.
-- Mencari materi berdasarkan bahan, memfilter bidang, dan menyimpan materi favorit.
-- Menambah catatan jurnal dan foto lokal, lalu memeriksa penyimpanan setelah memuat ulang.
-- Mengekspor cadangan JSON ke file unduhan dan memvalidasi isinya.
-- Menolak cadangan dengan versi tidak valid tanpa mengganti data yang ada.
-- Memulihkan cadangan valid dan memeriksa progres yang kembali.
-- Memeriksa tampilan beranda serta panduan sesi di layar ponsel.
-- Membuka seluruh 48 halaman materi dan worksheet tanpa galat konsol; semua aset `assets/library` (warna dan garis) yang dirujuk worksheet tersedia.
-- Menjalankan sesi kelas 1 SD: menandai bahan siap, berpindah ke worksheet anak, mengisi jawaban, memuat ulang (jawaban dan tampilan tetap), lalu menyelesaikan sesi.
-- Menyiapkan cetak worksheet anak, panduan orang tua, dan paket sesi tanpa galat.
+- Onboarding: kode salah format ditolak dengan pesan yang menjelaskan formatnya; `TKB-2026` dengan anak 6 tahun membuka TK B; `SD1-2026` dengan anak 8 tahun membuka Kelas 1 SD; `SD1-2026` dengan anak 6 tahun tetap membuka Kelas 1 SD disertai pemberitahuan ketidakcocokan usia.
+- Setelah onboarding hanya satu jenjang yang tampil: katalog TK B berisi 32 materi, Kelas 1 SD berisi 16 materi, tanpa pilihan ganti jenjang di mana pun.
+- Paket 30 hari tersusun otomatis; delapan hari pertama menyentuh delapan bidang berbeda. Paket Kelas 1 SD berisi 16 hari materi baru dan 14 hari ulang.
+- Halaman pembuka materi menampilkan judul, manfaat, harapan hasil, dan bahan; worksheet baru muncul setelah menekan Mulai.
+- Halaman kerja memuat bahan, perintah, worksheet, soal, dan pencatatan hasil dalam satu gulungan tanpa berpindah halaman.
+- Menandai jawaban salah: pilihan yang dipilih ditandai, jawaban yang tepat ikut ditampilkan, dan penjelasan menyebut jawaban benar. Jawaban dapat dihapus lalu dicoba lagi.
+- Posisi gulir tetap setelah menandai jawaban, mengganti variasi gambar worksheet, dan menjeda penghitung waktu.
+- Menyelesaikan sesi menyimpan hasil, menghapus draf, dan memperbarui ringkasan hasil serta penanda pada paket 30 hari.
+- Seluruh 48 worksheet dirender tanpa galat dan seluruh aset `assets/library` yang dirujuk tersedia.
+- Ekspor cadangan dan pemulihan cadangan berjalan; cadangan dengan kode atau jenjang yang tidak cocok ditolak.
 
-Dialog cetak sistem, keluaran printer, dan kualitas suara text-to-speech belum diverifikasi. Pengujian lintas browser Safari/Firefox dan perangkat fisik belum dilakukan.
+## Belum diverifikasi
 
-GitHub Pages tidak diaktifkan dalam pekerjaan ini. Petunjuk aktivasi manual tersedia di README.
+- Dialog cetak sistem, keluaran printer sebenarnya, dan kualitas suara text-to-speech.
+- Pengujian lintas browser Safari/Firefox dan perangkat fisik.
+- GitHub Pages tidak diaktifkan dalam pekerjaan ini; petunjuk aktivasi manual ada di README.
+- Ilustrasi masih SVG buatan tangan di dalam kode. Belum ada gambar hasil generator.
