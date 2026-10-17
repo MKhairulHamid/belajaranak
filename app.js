@@ -35,18 +35,10 @@ function avatar(name='bunny',size=''){
  const face=name==='frog'?'#7ACF8E':name==='bear'?'#DFA571':'#FFF7EC';
  return `<span class="avatar ${size}" style="background:${bg}"><svg viewBox="0 0 64 64" aria-hidden="true">${ears}<ellipse cx="32" cy="40" rx="23" ry="21" fill="${face}"/><path d="M23 37v2m18-2v2" stroke="#33425C" stroke-width="3.4" stroke-linecap="round"/><path d="m30 42 2 2 2-2m-2 2v3m-5-1c3 3 7 3 10 0" fill="none" stroke="#5A6478" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="18" cy="44" rx="4.5" ry="2.4" fill="#F79C9C"/><ellipse cx="46" cy="44" rx="4.5" ry="2.4" fill="#F79C9C"/></svg></span>`;
 }
-/* Ilustrasi bidang: warna cerah, bentuk sederhana, tanpa aset luar. */
+/* Ilustrasi bidang: berkas WebP lokal di assets/topics, dibuat sekali lalu
+   disimpan di repo. Murni dekoratif, jadi alt dikosongkan. */
 function art(id){
- const content={
-  math:'<rect x="44" y="70" width="56" height="56" rx="11" fill="#FF9E4F" transform="rotate(-8 44 70)"/><text x="60" y="110" font-size="32" font-weight="700" fill="#7A3B00" font-family="Georgia">1</text><rect x="104" y="46" width="57" height="57" rx="11" fill="#FFD64F" transform="rotate(9 104 46)"/><text x="121" y="88" font-size="33" font-weight="700" fill="#7A5A00" font-family="Georgia">2</text><circle cx="181" cy="110" r="29" fill="#3FA66B"/><path d="m178 75 6-14" stroke="#1F6B40" stroke-width="5"/><path d="M181 72c-16 0-17-13-17-13 16-1 17 13 17 13Z" fill="#1F6B40"/>',
-  bahasa:'<path d="M48 58c35-16 60 0 73 10 27-12 46-18 71-6v78c-25-12-49-7-71 4-28-14-53-18-73-7V58Z" fill="#FFFDF6" stroke="#E4573F" stroke-width="4"/><path d="M121 70v71m-57-60c15-3 28 1 40 6m-40 9c15-3 28 1 40 6m33-15 33-8m-33 23 33-8" stroke="#F79C8C" stroke-width="6" stroke-linecap="round"/><text x="78" y="46" fill="#E4573F" font-family="Georgia" font-size="36" font-weight="700" transform="rotate(-10 78 46)">a</text><text x="152" y="44" fill="#2E9BD6" font-family="Georgia" font-size="31" font-weight="700">b</text>',
-  english:'<path d="M46 45h126a16 16 0 0 1 16 16v38a16 16 0 0 1-16 16h-47l-24 19 1-19H46a16 16 0 0 1-16-16V61a16 16 0 0 1 16-16Z" fill="#EFE7FF" stroke="#6B4FBB" stroke-width="3"/><text x="58" y="92" font-family="Georgia" font-size="34" font-weight="700" fill="#5B3FA8">Hello!</text><circle cx="191" cy="120" r="23" fill="#FFB877"/><path d="M183 117v2m16-2v2m-16 9q8 7 16-1" stroke="#7A3B00" stroke-width="2.4" stroke-linecap="round"/>',
-  science:'<path d="M121 117V61m1 27c-36 2-47-18-40-37 32 1 44 17 40 37Zm0-16c0-31 22-45 44-40 0 26-20 42-44 40Z" stroke="#1F6B40" stroke-width="4" fill="#5FBF7A"/><path d="m83 109 11 42h58l10-42Z" fill="#FF9E4F"/><path d="M79 107h88v12H79Z" fill="#FFBE7D"/><circle cx="183" cy="52" r="20" fill="#FFD64F"/>',
-  art:'<path d="M145 33c-57-7-91 32-80 68 10 34 65 53 93 37 19-12-17-20-8-34 7-12 33 4 41-11 13-25-19-56-46-60Z" fill="#FFFDF6" stroke="#F08A24" stroke-width="3"/><circle cx="106" cy="64" r="11" fill="#E4573F"/><circle cx="90" cy="92" r="11" fill="#3FA66B"/><circle cx="135" cy="54" r="11" fill="#FFD64F"/><circle cx="167" cy="69" r="11" fill="#6B4FBB"/><path d="m150 137 36-78 9 4-33 81-10 11Z" fill="#2E9BD6"/><path d="m184 60 10-22 10 5-9 23Z" fill="#F08A24"/>',
-  motor:'<path d="m131 24 44 48-42 42-39-47Z" fill="#FF9E4F"/><path d="m131 24 2 90 42-42-44-48Z" fill="#FFD64F"/><path d="M133 114c30 21-8 27 1 44m0-43-5-74" stroke="#2E9BD6" stroke-width="2.4"/><path d="m133 131-15-4 3 14 12-10 13 1-3 12Z" fill="#2E9BD6"/><circle cx="59" cy="110" r="17" fill="#FFFDF6" stroke="#2E9BD6" stroke-width="2.5"/><path d="M52 110h14m-7-7v14" stroke="#2E9BD6" stroke-width="2.6"/>',
-  social:'<circle cx="83" cy="91" r="34" fill="#FFB877"/><circle cx="159" cy="98" r="34" fill="#FFD64F"/><path d="M72 87v3m22-3v3m-20 10q9 9 19 0m53-9v3m22-3v3m-20 10q9 9 19 0" stroke="#7A3B00" stroke-width="3.2" stroke-linecap="round"/><path d="M119 53c-35-19-15-43 0-26 15-17 35 7 0 26Z" fill="#E4573F"/>',
-  life:'<path d="M97 60V49a25 25 0 0 1 50 0v11" stroke="#1F6B40" stroke-width="9"/><rect x="76" y="56" width="93" height="95" rx="24" fill="#3FA66B"/><path d="M75 79h96" stroke="#15543098" stroke-width="3"/><rect x="93" y="99" width="60" height="36" rx="10" fill="#EAF7D8"/><path d="M98 106h50m-39 15h23" stroke="#7FB45F" stroke-width="3.4" stroke-linecap="round"/><path d="m179 55 5 10 11 2-8 8 1 11-10-5-9 5 2-11-8-8 11-2Z" fill="#FFD64F"/>'};
- return `<svg viewBox="0 0 240 175" class="topic-art" aria-hidden="true"><ellipse cx="122" cy="113" rx="91" ry="48" fill="white" opacity=".3"/>${content[id]||''}</svg>`;
+ return `<img class="topic-art" src="assets/topics/topic-${id}.webp" alt="" width="560" height="560" loading="lazy" decoding="async">`;
 }
 function toast(message){
  if(dialog.open){let note=dialog.querySelector('.dialog-feedback');
@@ -98,7 +90,7 @@ function empty(ic,title,body,button='',action=''){
 
 /* ---------- onboarding: umur + kode belajar menentukan satu jenjang ---------- */
 function welcomePage(){
- return `<div class="onboard"><div class="onboard-art">${art('math')}${art('bahasa')}${art('science')}</div>`
+ return `<div class="onboard"><div class="onboard-art"><img src="assets/topics/hero-home.webp" alt="" width="1200" height="800" decoding="async"></div>`
  +`<div class="onboard-card"><a class="brand onboard-brand" href="#welcome"><img src="assets/favicon.svg" width="40" height="40" alt=""><span>belajar<span class="brand-light">anak</span></span></a>`
  +`<h1>Siapkan ruang belajar anak Anda</h1>`
  +`<p class="onboard-lead">Isi usia anak dan kode belajar dari pembelian Anda. Aplikasi langsung menyiapkan paket 30 hari — Anda tidak perlu menyusun rencana sendiri.</p>`

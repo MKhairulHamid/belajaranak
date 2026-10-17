@@ -55,9 +55,8 @@
 
 /* ---------- onboarding ---------- */
 .onboard{min-height:100vh;display:grid;grid-template-columns:1fr minmax(330px,470px);background:var(--paper)}
-.onboard-art{position:relative;overflow:hidden;background:linear-gradient(150deg,#E3F5E4,#E0EEFC 45%,#FFF4D2);display:grid;align-content:center;gap:10px;padding:48px}
-.onboard-art>.topic-art{width:100%;max-width:330px;height:auto}
-.onboard-art>.topic-art:nth-child(2){margin-left:auto}
+.onboard-art{position:relative;overflow:hidden;background:linear-gradient(150deg,#E3F5E4,#E0EEFC 45%,#FFF4D2);display:grid;place-content:center;padding:48px}
+.onboard-art>img{width:100%;max-width:520px;height:auto;border-radius:20px}
 .onboard-card{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;gap:4px;overflow-y:auto}
 .onboard-brand{margin-bottom:26px}
 .onboard-card h1{font-size:31px;margin-bottom:12px}
@@ -193,3 +192,11 @@
 .membership-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#fff;color:#1B6E42;flex-shrink:0}
 .membership strong{display:block;font-size:12px}
 .membership small{font-size:9.5px;color:#3E6A52}
+
+/* Ilustrasi bidang kini berkas WebP, bukan SVG inline. */
+img.topic-art{display:block;object-fit:contain;max-width:100%;height:auto}
+.topic-card>img.topic-art{width:100%;height:150px;object-fit:contain;padding:10px 0 0}
+.today>img.topic-art{width:230px;height:auto}
+.lesson-hero>img.topic-art{width:175px;height:auto}
+.material-visual>img.topic-art{width:100%;height:100%;object-fit:contain;padding:12px}
+@media(max-width:900px){.today>img.topic-art{width:100%;max-width:260px}}
