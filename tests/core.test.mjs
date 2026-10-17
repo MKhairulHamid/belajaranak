@@ -16,11 +16,11 @@ const setup=(level='tkb',name='Aira',dob='2020-03-14')=>{
 
 test('katalog mencakup delapan bidang dengan materi lengkap dan tanpa duplikat',()=>{
  assert.equal(D.topics.length,8);
- assert.equal(D.lessons.length,48);
- assert.equal(new Set(D.lessons.map(l=>l.id)).size,48);
+ assert.equal(D.lessons.length,64);
+ assert.equal(new Set(D.lessons.map(l=>l.id)).size,64);
  for(const t of D.topics){
   assert.equal(D.lessons.filter(l=>l.topic===t.id&&l.level==='tkb').length,4);
-  assert.equal(D.lessons.filter(l=>l.topic===t.id&&l.level==='sd1').length,2);
+  assert.equal(D.lessons.filter(l=>l.topic===t.id&&l.level==='sd1').length,4);
  }
  for(const l of D.lessons){
   assert.ok(['tkb','sd1'].includes(l.level));
@@ -90,10 +90,24 @@ test('paket 30 hari tersusun bergilir antar bidang dan hanya memakai materi seje
  }
 });
 
+test('katalog kedua jenjang cukup untuk 30 hari materi baru tanpa hari ulang',()=>{
+ for(const level of ['tkb','sd1']){
+  const plan=C.buildPlan(level,D.lessons);
+  assert.equal(plan.days.filter(d=>d.kind==='new').length,C.PLAN_DAYS,'hari baru kurang di '+level);
+  assert.equal(plan.days.filter(d=>d.kind==='review').length,0,'hari ulang tidak diperlukan di '+level);
+ }
+});
+
 test('jenjang dengan materi lebih sedikit tetap mendapat 30 hari lewat hari ulang',()=>{
- const sd1=C.buildPlan('sd1',D.lessons);
- assert.equal(sd1.days.filter(d=>d.kind==='new').length,16);
- assert.equal(sd1.days.filter(d=>d.kind==='review').length,14);
+ const trimmed=D.lessons.filter(l=>l.level==='sd1'&&l.order<=2);
+ const plan=C.buildPlan('sd1',trimmed);
+ assert.equal(plan.days.length,C.PLAN_DAYS);
+ assert.equal(plan.days.filter(d=>d.kind==='new').length,16);
+ assert.equal(plan.days.filter(d=>d.kind==='review').length,14);
+ const fresh=plan.days.filter(d=>d.kind==='new').map(d=>d.lessonId);
+ assert.equal(new Set(fresh).size,16);
+ for(const entry of plan.days.filter(d=>d.kind==='review'))
+  assert.ok(fresh.includes(entry.lessonId),'hari ulang harus memakai materi yang sudah muncul');
 });
 
 test('nomor hari paket dihitung dari tanggal mulai dan berhenti di hari terakhir',()=>{
@@ -173,7 +187,7 @@ test('kemajuan per bidang hanya menghitung materi jenjang anak',()=>{
  const tkb=C.newChild('A','2020-03-14','bunny','tkb',D.lessons);
  const sd1=C.newChild('B','2018-03-14','bear','sd1',D.lessons);
  assert.equal(C.topicProgress(tkb,'math',D.lessons).total,4);
- assert.equal(C.topicProgress(sd1,'math',D.lessons).total,2);
+ assert.equal(C.topicProgress(sd1,'math',D.lessons).total,4);
 });
 
 test('materi yang belum mandiri ditawarkan ulang setelah dua hari',()=>{
